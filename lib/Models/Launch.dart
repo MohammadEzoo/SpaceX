@@ -8,32 +8,32 @@ part 'Launch.g.dart';
 
 @JsonSerializable()
 class Launch {
-  int flightNumber;
-  String missionName;
-  List<String> missionId;
-  String launchYear;
-  String launchDateLocal;
+  int flight_number;
+  String mission_name;
+  List<String> mission_id;
+  String launch_year;
+  String launch_date_local;
   int launch_date_unix;
   Rocket rocket;
-  LaunchSite launchSite;
+  LaunchSite launch_site;
   Links links;
   String details;
   bool upcoming;
-  String launchDateSource;
+  String launch_dateSource;
 
   Launch(
-      {this.flightNumber,
-      this.missionName,
-      this.missionId,
+      {this.flight_number,
+      this.mission_name,
+      this.mission_id,
       this.launch_date_unix,
-      this.launchYear,
-      this.launchDateLocal,
+      this.launch_year,
+      this.launch_date_local,
       this.rocket,
-      this.launchSite,
+      this.launch_site,
       this.links,
       this.details,
       this.upcoming,
-      this.launchDateSource});
+      this.launch_dateSource});
   factory Launch.fromJson(json) => _$LaunchFromJson(json);
   toJson() => _$LaunchToJson(this);
 }

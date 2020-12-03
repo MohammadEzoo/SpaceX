@@ -1,4 +1,7 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:spacex/Ui/HomePage/HomePage.dart';
+
 
 class App extends StatefulWidget {
   App({Key key}) : super(key: key);
@@ -8,10 +11,11 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: child,
+    return MaterialApp(
+      home: HomePage(),
     );
   }
 }

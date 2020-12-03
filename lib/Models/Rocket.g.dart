@@ -8,14 +8,14 @@ part of 'Rocket.dart';
 
 Rocket _$RocketFromJson(Map<String, dynamic> json) {
   return Rocket(
-    rocketId: json['rocketId'] as String,
-    rocketName: json['rocketName'] as String,
-    rocketType: json['rocketType'] as String,
+    rocket_id: json['rocket_id'] as String,
+    rocket_name: json['rocket_name'] as String,
+    rocket_type: json['rocket_type'] as String,
   );
 }
 
 Map<String, dynamic> _$RocketToJson(Rocket instance) => <String, dynamic>{
-      'rocketId': instance.rocketId,
-      'rocketName': instance.rocketName,
-      'rocketType': instance.rocketType,
+      'rocket_id': instance.rocket_id,
+      'rocket_name': instance.rocket_name,
+      'rocket_type': instance.rocket_type,
     };

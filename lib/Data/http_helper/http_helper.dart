@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:spacex/Models/BaseResponse.dart';
+
 import 'package:spacex/Models/Launch.dart';
 
 import 'Ihttp_helper.dart';
@@ -25,10 +25,13 @@ class HttpHelper implements IHttpHelper {
       final response = await _dio.get('launches/upcoming');
 
       if (response.statusCode == 200) {
-        final BaseResponse baseResponse =
-            BaseResponse.fromJson(json.decode(response.data));
-        if (baseResponse.launches != null) {
-          return baseResponse.launches;
+        final json = jsonDecode(response.data);
+        final List<Launch> launches = (json as List)
+            ?.map((e) => e == null ? null : Launch.fromJson(e))
+            ?.toList();
+
+        if (launches != null) {
+          return launches;
         } else {
           return Future.error(response.statusMessage);
         }

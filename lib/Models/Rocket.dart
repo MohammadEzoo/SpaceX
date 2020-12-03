@@ -4,14 +4,14 @@ part 'Rocket.g.dart';
 
 @JsonSerializable()
 class Rocket {
-  String rocketId;
-  String rocketName;
-  String rocketType;
+  String rocket_id;
+  String rocket_name;
+  String rocket_type;
 
   Rocket({
-    this.rocketId,
-    this.rocketName,
-    this.rocketType,
+    this.rocket_id,
+    this.rocket_name,
+    this.rocket_type,
   });
 
   factory Rocket.fromJson(json) => _$RocketFromJson(json);

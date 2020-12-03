@@ -8,15 +8,15 @@ part of 'LaunchSite.dart';
 
 LaunchSite _$LaunchSiteFromJson(Map<String, dynamic> json) {
   return LaunchSite(
-    siteId: json['siteId'] as String,
-    siteName: json['siteName'] as String,
-    siteNameLong: json['siteNameLong'] as String,
+    site_id: json['site_id'] as String,
+    site_name: json['site_name'] as String,
+    site_name_long: json['site_name_long'] as String,
   );
 }
 
 Map<String, dynamic> _$LaunchSiteToJson(LaunchSite instance) =>
     <String, dynamic>{
-      'siteId': instance.siteId,
-      'siteName': instance.siteName,
-      'siteNameLong': instance.siteNameLong,
+      'site_id': instance.site_id,
+      'site_name': instance.site_name,
+      'site_name_long': instance.site_name_long,
     };

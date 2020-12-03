@@ -8,14 +8,14 @@ part of 'Links.dart';
 
 Links _$LinksFromJson(Map<String, dynamic> json) {
   return Links(
-    missionPatch: json['missionPatch'] as String,
-    missionPatchSmall: json['missionPatchSmall'] as String,
-    redditCampaign: json['redditCampaign'] as String,
+    mission_patch: json['mission_patch'] as String,
+    mission_patch_small: json['mission_patch_small'] as String,
+    reddit_campaign: json['reddit_campaign'] as String,
   );
 }
 
 Map<String, dynamic> _$LinksToJson(Links instance) => <String, dynamic>{
-      'missionPatch': instance.missionPatch,
-      'missionPatchSmall': instance.missionPatchSmall,
-      'redditCampaign': instance.redditCampaign,
+      'mission_patch': instance.mission_patch,
+      'mission_patch_small': instance.mission_patch_small,
+      'reddit_campaign': instance.reddit_campaign,
     };

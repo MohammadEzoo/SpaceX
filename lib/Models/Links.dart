@@ -7,14 +7,14 @@ part 'Links.g.dart';
 
 @JsonSerializable()
 class Links {
-  String missionPatch;
-  String missionPatchSmall;
-  String redditCampaign;
+  String mission_patch;
+  String mission_patch_small;
+  String reddit_campaign;
 
   Links({
-    this.missionPatch,
-    this.missionPatchSmall,
-    this.redditCampaign,
+    this.mission_patch,
+    this.mission_patch_small,
+    this.reddit_campaign,
   });
 
    factory Links.fromJson(json) => _$LinksFromJson(json);
